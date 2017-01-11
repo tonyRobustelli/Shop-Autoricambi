@@ -17,7 +17,27 @@
             <div class="alto"><p align="right">assistenza clienti: 333 33 33 333</p></div>
             <div class="logo">
                 <img class="icona_logo" src="images/logo.png" alt="logo"/><span class="scritta_logo">shop-autoricambi</span>
-               
+                <%@ page contentType="text/html; charset=UTF-8" import="java.util.*,Bean.*"%>
+
+                <%  Utente utente = (Utente) session.getAttribute("Utente");
+                     if (utente != null) {
+                         if (utente.isAmministratore()) {%>
+                <span class="box"><a href="areammi.jsp">Area Amministratore</a></span>
+                <%}
+           }%>
+
+                <%  utente = (Utente) session.getAttribute("Utente");
+            if (utente != null) {
+                if (!utente.isAmministratore()) {%>
+                <span class="box"><a href="areacli.jsp">Area Cliente</a></span>
+                <%}
+           }%>
+
+                <%  utente = (Utente) session.getAttribute("Utente");
+            if (utente == null) {%>
+
+                <span class="box"><a href="login.jsp">Login</a></span>
+                <%}%>
 
 
             </div>
