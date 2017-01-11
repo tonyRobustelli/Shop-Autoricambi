@@ -23,6 +23,7 @@ public class ProdottoFoto {
     /**
      * ritorna l'istanza di un oggetto prodotto 
      * @return prodotto_bean
+     * post: prodotto_bean
      */
     public Prodotto getProdotto_bean() {
 		return prodotto_bean;
@@ -31,6 +32,7 @@ public class ProdottoFoto {
     /**
      *  Setta l'oggetto prodotto
      * @param prodotto_bean
+     * pre: prodotto_bean
      */
     public void setProdotto_bean(Prodotto prodotto_bean) {
 		this.prodotto_bean = prodotto_bean;
@@ -39,6 +41,7 @@ public class ProdottoFoto {
     /**
      * Ritorna un oggetto Foto 
      * @return foto_bean
+     * post: foto_bean
      */
     public Foto getFoto_bean() {
 		return foto_bean;
@@ -47,6 +50,7 @@ public class ProdottoFoto {
     /**
      * Setta un oggetto Foto
      * @param foto_bean
+     * pre: foto_bean
      */
     public void setFoto_bean(Foto foto_bean) {
 		this.foto_bean = foto_bean;
