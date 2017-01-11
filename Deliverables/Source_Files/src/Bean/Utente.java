@@ -1,10 +1,16 @@
 package Bean;
 
+import java.util.Date;
+
+/**
+ * Rappresenta un entità
+ * 
+ */
 public class Utente {
 	private String CodiceFiscale;
 	private String cap;
 	private String via;
-    private String citta;
+        private String citta;
 	private String nome;
 	private String cognome;
 	private String datanascita;
@@ -14,9 +20,10 @@ public class Utente {
 	private String password;
 	private boolean amministratore;
         
-	
-	
-	public Utente(){
+    /**
+     * Costruttore di ProdottoFoto, esso setta le variabili di stato
+     */
+    public Utente(){
 		setCodiceFiscale("");
 		setCap("");
 		setVia("");
@@ -28,127 +35,228 @@ public class Utente {
 		setEmail("");
 		setPassword("");
 		setAmministratore(false);
-        setCitta("");
+                setCitta("");
+		
 	}
 
-
-
-
-
-
-	public String getNome() {
+    /**
+     * Ritorno il nome dell'utente
+     * @return nome
+     * post: nome!=null
+     */
+    public String getNome() {
 		return nome;
 	}
 
-
-	public void setNome(String nome) {
+    /**
+     * Setto il nome dell'utente
+     * @param nome
+     * pre: nome!=null
+     */
+    public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-
-	public String getCognome() {
+    /**
+     * Ritorno il cognome dell'utente
+     * @return cognome
+     * post: cognome!=null
+     */
+    public String getCognome() {
 		return cognome;
 	}
 
-
-	public void setCognome(String cognome) {
+    /**
+     * Setto il cognome dell'utente
+     * @param cognome
+     * pre: cognome!=null
+     */
+    public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
 
-
-        public String getCitta() {
+    /**
+     * Ritorno la citta dell'utente
+     * @return citta
+     * post: citta!=null
+     */ 
+    public String getCitta() {
 		return citta;
 	}
-	public void setCitta(String citta) {
+
+    /**
+     * Setto la citta dell'utente
+     * @param citta
+     * pre: citta!=null
+     */
+    public void setCitta(String citta) {
 		this.citta = citta;
 	}
 
-
-
-	public String getTelefono() {
+    /**
+     * Ritorno il numero di telefono dell'utente
+     * @return telefono
+     * post: telefono!=null
+     */
+    public String getTelefono() {
 		return telefono;
 	}
 
-
-	public void setTelefono(String telefono) {
+    /**
+     * Setto il numero di telefono dell'utente
+     * @param telefono
+     * pre: telefono!=null
+     */
+    public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 
-
-	public String getCellulare() {
+    /**
+     * Ritorno il numero di cellulare dell'utente
+     * @return cell
+     * post: cell!=null
+     */
+    public String getCellulare() {
 		return cell;
 	}
 
-
-	public void setCellulare(String cellulare) {
+    /**
+     * Setto il numero di cellulare dell'utente
+     * @param cellulare
+     * pre: cellulare!=null
+     */
+    public void setCellulare(String cellulare) {
 		this.cell = cellulare;
 	}
 
-
-	public String getEmail() {
+    /**
+     * Ritorno l'email dell'utente
+     * @return email
+     * post: email!=null
+     */
+    public String getEmail() {
 		return email;
 	}
 
-
-	public void setEmail(String email) {
+    /**
+     * Setto l'email dell'utente
+     * @param email
+     * pre: email!=null
+     */
+    public void setEmail(String email) {
 		this.email = email;
 	}
 
-
-	public String getPassword() {
+    /**
+     * Ritorno la password dell'utente
+     * @return password
+     * post: password diverso da null e password.length() maggiore 7 e deve contenere almeno: una lettera maiuscola, miniscola, carattere e numero
+     */
+    public String getPassword() {
 		return password;
 	}
 
-
-	public void setPassword(String password) {
+    /**
+     * Setto la password dell'utente
+     * @param password
+     * pre: password!=null
+     */
+    public void setPassword(String password) {
 		this.password = password;
 	}
 
-
-	public String getVia() {
+    /**
+     * Ritorno la via dell'utente
+     * @return via
+     * post: via!=null
+     */
+    public String getVia() {
 		return via;
 	}
 
-
-	public void setVia(String via) {
+    /**
+     * Setto la via dell'utente
+     * @param via
+     * pre: via!=null
+     */
+    public void setVia(String via) {
 		this.via = via;
 	}
 
-
-	public String getCap() {
+    /**
+     * Ritorno il cap dell'utente
+     * @return cap
+     * post: cap!=null
+     */
+    public String getCap() {
 		return cap;
 	}
 
-
-	public void setCap(String cap) {
+    /**
+     * Setto il cap dell'utente
+     * @param cap
+     * pre: cap!=null
+     */
+    public void setCap(String cap) {
 		this.cap = cap;
 	}
 
-
-	public boolean isAmministratore() {
+    /**
+     * Ritorno un valore booleano che indica se l'utente e' amministratore
+     * true, se e' amministratore
+     * false altrimenti
+     * @return ammnistratore
+     */
+    public boolean isAmministratore() {
 		return amministratore;
 	}
 
-
-	public void setAmministratore(boolean amministratore) {
+    /**
+     * Setto il valore booleano che indica se l'utente e' amministratore
+     * true, se e' amministratore
+     * false altrimenti
+     * @param amministratore
+     */
+    public void setAmministratore(boolean amministratore) {
 		this.amministratore = amministratore;
 	}
 
+    /**
+     * Setta la data di nascita dell'utente
+     * @param string
+     * pre: string!=null
+     */
     public void setDataNascita(String string) {
        this.datanascita=string;
     }
 
+    /**
+     * Ritorna la data di nascita dell'utente
+     * @return datanascita
+     * post: datanascita!=null
+     */
     public String getDataNascita(){
         return this.datanascita;
     }
         
-    
+    /**
+     * Setto il codica fiscale dell'utente
+     * @param string
+     * pre: string!=null
+     */
     public void setCodiceFiscale(String string) {
         this.CodiceFiscale=string;
     }
     
+    /**
+     * Setto ilcodice fiscale dell'utente
+     * @return CodiceFiscale
+     * post: CodiceFiscale!=null
+     */
     public String getCodiceFiscale(){
         return this.CodiceFiscale;
     }
+	
+	
 
 }
