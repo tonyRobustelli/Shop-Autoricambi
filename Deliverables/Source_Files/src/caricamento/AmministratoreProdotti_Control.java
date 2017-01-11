@@ -1,10 +1,39 @@
+package caricamento;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Bean.Utente;
+import Bean.Foto;
+
+import Bean.Prodotto;
+
+/**
+ * Classe AmministratoreProdotti_Control, per la gestione dei prodotti
+ * 
+ */
 public class AmministratoreProdotti_Control extends HttpServlet{
     
-        public AmministratoreProdotti_Control() {
+    /**
+     * Costruttore empty
+     */
+    public AmministratoreProdotti_Control() {
         super();
     }
     
-    
+    /**
+     * Serve una richiesta http post, per il caricamento di un nuovo prodotto 
+     * richiamando Prodotto_Manager per l'insert nella base di dati 
+     * @param request
+     * @param response
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException
     {
         
@@ -55,7 +84,13 @@ public class AmministratoreProdotti_Control extends HttpServlet{
         }
     }
     
-    
+    /**
+     * Empty
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException
     {
         doGet(request,response);
