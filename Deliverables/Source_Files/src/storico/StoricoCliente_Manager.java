@@ -10,12 +10,17 @@ import Bean.ProdottoFoto;
 import DBMS.ConnessioneDatabase;
 import java.sql.Connection;
 
-
+/**
+ * Classe che si occupa di gestire la transazione inerente allo storico del cliente
+ */
 public class StoricoCliente_Manager {
     
     
     private ArrayList<AmministratoreUtente> lista_ogg_amministratore_cli;
 
+    /**
+     * Costruttore Vuoto
+     */
     public StoricoCliente_Manager(){
         
         
@@ -30,6 +35,13 @@ public class StoricoCliente_Manager {
     
     //query cosa far vedere nell area cliente , eseguo le query (fatture del singolo cliente)
 
+    /**
+     * Metodo che si occupa di cercare tutti i prodotti acquistati da un cliente
+     * @param codice_fiscale - il codice fiscale del cliente di cui si vogliono conoscere i prodotti acquistati
+     * pre: codice_codice.length() == 16
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public void querycliente(String codice_fiscale) throws ClassNotFoundException, SQLException{
         Connection conn=(Connection) ConnessioneDatabase.getConnection();
         Statement st=conn.createStatement();
@@ -82,10 +94,18 @@ public class StoricoCliente_Manager {
         
     }
     
+    /**
+     * Metodo get per avere la lista dei prodotti acquistati
+     * @return - la lista dei prodotti acquistati
+     */
     public ArrayList<AmministratoreUtente> getLista_ogg_amministratore_cli() {
         return lista_ogg_amministratore_cli;
     }
 
+    /**
+     * Metodo set per settare la lista dei prodotti acquistati
+     * @param lista_ogg_amministratore_cli - lista dei prodotti 
+     */
     public void setLista_ogg_amministratore_cli(ArrayList<AmministratoreUtente> lista_ogg_amministratore_cli) {
         this.lista_ogg_amministratore_cli = lista_ogg_amministratore_cli;
     }
