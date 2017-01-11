@@ -40,4 +40,40 @@
 
 
 
+<section class="prodotti">
+    <%
+        RicercaProdotto_Manager ser = new RicercaProdotto_Manager();
+        ArrayList<ProdottoFoto> array_prodotto = ser.lista_prodotti();
+        ProdottoFoto prodotto_foto = new ProdottoFoto();
+        Prodotto prodotto_bean = new Prodotto();
+        Foto foto_bean = new Foto();
+
+        for (int i = 0; i < array_prodotto.size() && i < 4; i++) {
+
+            prodotto_foto = array_prodotto.get(i);
+            foto_bean = prodotto_foto.getFoto_bean();
+            prodotto_bean = prodotto_foto.getProdotto_bean();
+            if (!prodotto_bean.isOfferta()) {
+                continue;
+            }
+    %>
+    <div class="prodotto_singolo">
+        <a href="scheda.jsp?cod_pezzo=<%=prodotto_bean.getCod_pezzo()%>" ><img src="images/<%=foto_bean.getPath()%>" ></a>
+        <p><%=prodotto_bean.getModello()%></p>
+
+        <span><% if (prodotto_bean.isOfferta()) {%> 
+            <del style="color:#747575;"><%=prodotto_bean.getPrezzo()%>&euro; </del> <%=prodotto_bean.getPrezzo_scontato()%>&euro; <%}%> 
+            <% if (!prodotto_bean.isOfferta()) {%> <%=prodotto_bean.getPrezzo()%>&euro; <%}%> </span>
+
+
+        <br><br>
+        <a class="det_prod" href="scheda.jsp?cod_pezzo=<%=prodotto_bean.getCod_pezzo()%>">dettagli</a>
+    </div>
+
+    <% }%>
+
+</section>
+
+
+
 <%@ include file="footer.jsp" %>
