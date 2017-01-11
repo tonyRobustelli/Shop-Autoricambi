@@ -14,7 +14,7 @@
 
         </div>
         <div style="float:left; color:#fff; font-size:12px; margin-left:22px ; margin-top:7px ;">
-            <b>DavideCretella&GerardoDellaMonica&GiuseppeSessa Copyright©2016</b>				
+            <b>GerardoDellaMonica&GiuseppeSessa&AntonioRobustelli&SimoneFinelli Copyright©2016</b>				
 
 
         </div>
