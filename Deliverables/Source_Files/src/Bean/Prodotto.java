@@ -1,5 +1,9 @@
 package Bean;
 
+/**
+ * Rappresenta un entità 
+ * 
+ */
 public class Prodotto {
 	private String cod_pezzo;
 	private String marchio;
@@ -11,7 +15,10 @@ public class Prodotto {
 	private String descrizione;
 	private int quantita;
 	
-	public Prodotto(){
+    /**
+     * Costruttore, esso setta le variabili di stato
+     */
+    public Prodotto(){
 		setCod_pezzo("");
 		setMarchio("");
 		setModello("");
@@ -23,67 +30,147 @@ public class Prodotto {
 		
 	}
 
-	public String getCod_pezzo() {
+    /**
+     * ritorna l'identificativo di un prodotto
+     * @return cod_pezzo
+     * post: cod_pezzo!=null
+     */
+    public String getCod_pezzo() {
 		return cod_pezzo;
 	}
 
-	public void setCod_pezzo(String cod_pezzo) {
+    /**
+     * Setta l'identificativo di un prodotto
+     * @param cod_pezzo
+     * pre: cod_pezzo!=null
+     */
+    public void setCod_pezzo(String cod_pezzo) {
 		this.cod_pezzo = cod_pezzo;
 	}
 
-	public String getMarchio() {
+    /**
+     * Ritorno il marchio del prodotto
+     * @return marchio
+     * post: marchio!=null
+     */
+    public String getMarchio() {
 		return marchio;
 	}
 
-	public void setMarchio(String marchio) {
+    /**
+     * Setto il marchio del prodotto
+     * @param marchio
+     * pre: marchio!=null
+     */
+    public void setMarchio(String marchio) {
 		this.marchio = marchio;
 	}
 
-	public String getModello() {
+    /**
+     * Ritorno il modello del prodotto
+     * @return modello 
+     * post: modello!=null
+     */
+    public String getModello() {
 		return modello;
 	}
 
-	public void setModello(String modello) {
+    /**
+     * Setto il modello del prodotto
+     * @param modello
+     * pre: modello
+     */
+    public void setModello(String modello) {
 		this.modello = modello;
 	}
 
-	public float getPrezzo() {
+    /**
+     * Ritorno il prezzo del prodotto
+     * @return prezzo
+     * post: prezzo maggiore di 0
+     */
+    public float getPrezzo() {
 		return prezzo;
 	}
 
-	public void setPrezzo(float prezzo) {
+    /**
+     * Setto il prezzo del prodotto
+     * @param prezzo
+     * pre: prezzo maggiore di 0
+     */
+    public void setPrezzo(float prezzo) {
 		this.prezzo = prezzo;
 	}
 
-	public boolean isOfferta() {
+    /**
+     * Ritorno un valore booleano, che indica se il prodotto e' in offerta o meno
+     * @return offerta
+     */
+    public boolean isOfferta() {
 		return offerta;
 	}
 
-	public void setOfferta(boolean offerta) {
+    /**
+     * Setto con un valore booleano se il prodotto e' in offerta, 
+     * true, in offerta
+     * false altrimenti
+     * @param offerta
+     */
+    public void setOfferta(boolean offerta) {
 		this.offerta = offerta;
 	}
 
-	public float getPrezzo_scontato() {
+    /**
+     * Ritorna il prezzo scontato
+     * @return PrezzoScontato
+     * post: PrezzoScontato maggiore di 0
+     */
+    public float getPrezzo_scontato() {
 		return PrezzoScontato;
 	}
 
-	public void setPrezzo_scontato(float PrezzoScontato) {
+    /**
+     * Setto il prezzo scontato
+     * @param PrezzoScontato
+     * pre: PrezzoScontato
+     */
+    public void setPrezzo_scontato(float PrezzoScontato) {
 		this.PrezzoScontato = PrezzoScontato;
 	}
 
-	public String getDescrizione() {
+    /**
+     * Ritorno la descrizione del prodotto
+     * @return descrizione
+     * post: descrizione!=null
+     */
+    public String getDescrizione() {
 		return descrizione;
 	}
 
-	public void setDescrizione(String descrizione) {
+    /**
+     * Setto la descrizione del prodotto
+     * @param descrizione
+     * pre: edescrizione!=null
+     */
+    public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
 
-	public int getQuantita() {
+    /**
+     * ritorno la quantita' di prodotto disponibile
+     * @return
+     * post: quantita
+     */
+    public int getQuantita() {
 		return quantita;
 	}
 
-	public void setQuantita(int quantita) {
+    /**
+     * Setto la quantita' di prodotto disponibile
+     * @param quantita
+     * pre: quantita
+     */
+    public void setQuantita(int quantita) {
 		this.quantita = quantita;
 	}
 
