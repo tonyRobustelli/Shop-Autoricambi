@@ -20,12 +20,22 @@ import Bean.ProdottoFoto;
 import DBMS.ConnessioneDatabase;
 import java.util.ArrayList;
 
+/**
+ * Classe RicercaProdotto_Manager per la ricerca dei prodotti 
+ * 
+ */
 public class RicercaProdotto_Manager {
     
     
     //lista dei prodotti
 
-  
+    /**
+     * ritorna la lista di tutti i prodotti 
+     * @return ArrayList di ProdottoFoto
+     * post: array_prodotto!=null
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public ArrayList<ProdottoFoto> lista_prodotti() throws ClassNotFoundException, SQLException{
         ArrayList<ProdottoFoto> array_prodotto=new ArrayList<>();
         Connection conn=(Connection) ConnessioneDatabase.getConnection();
@@ -66,7 +76,15 @@ public class RicercaProdotto_Manager {
     
     //lista dei prodotti carcati grazie alla servlet di ricerca
 
-  
+    /**
+     * Esegue la query di ricerca prodotto 
+     * @param prodotto
+     * @return ArrayList Di ProdottoFoto
+     * pre: prodotto!=null
+     * post: array_prodotto!=null
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public ArrayList<ProdottoFoto> cerca_prodotti(Prodotto prodotto) throws ClassNotFoundException, SQLException{
         ArrayList<ProdottoFoto> array_prodotto=new ArrayList<>();
         Connection conn=(Connection) ConnessioneDatabase.getConnection();
@@ -117,7 +135,16 @@ public class RicercaProdotto_Manager {
     
     //filtra il prodotto da far vedere nella scheda tecnica
 
-  
+    /**
+     * Ritorna il singolo oggetto Prodotto 
+     * per la scheda tecnica del prodotto 
+     * @param cod_pezzo
+     * @return Prodotto 
+     * pre: cod_pezzo!=null
+     * post: prodotto!=null
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public Prodotto scheda_tecnica_prodotto(String cod_pezzo) throws ClassNotFoundException, SQLException{
         
         Connection conn=(Connection) ConnessioneDatabase.getConnection();
@@ -152,7 +179,16 @@ public class RicercaProdotto_Manager {
     
     //filtra le foto del prodotto
 
-    
+    /**
+     * Esegue un interrogazione al database per ottenere tutte le foto di un singolo prodotto
+     * metodo utilizzato per la scheda tecnica del prodotto 
+     * @param cod_pezzo
+     * @return ArrayList di Foto 
+     * pre: cod_pezzo!=null
+     * post: foto_array!=null
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public ArrayList<Foto> scheda_tecnica_foto(String cod_pezzo) throws ClassNotFoundException, SQLException{
         
         Connection conn=(Connection) ConnessioneDatabase.getConnection();
