@@ -12,10 +12,22 @@ import DBMS.ConnessioneDatabase;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-
+/**
+ *
+ * Classe Prodotto_Manager per l'inserimento del prodotto nella base di dati
+ */
 public class Prodotto_Manager {
     
-   
+    /**
+     * Metodo per inserire il prodotto nella base di dati se esso e' presente 
+     * aggiorna solo la quantita'
+     * @param prod
+     * @param foto
+     * @return 2/1, si comporta come true o false
+     * pre: prod diverso da null  e foto diverso da null
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public int SalvaProdotto(Prodotto prod,Foto foto) throws ClassNotFoundException, SQLException
     {
         
