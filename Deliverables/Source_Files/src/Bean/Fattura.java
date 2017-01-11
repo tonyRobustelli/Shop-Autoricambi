@@ -1,5 +1,9 @@
 package Bean;
 
+/**
+ * Rappresenta un entità 
+ * 
+ */
 public class Fattura {
 	private int CodiceFattura;
 	private String data;
@@ -7,8 +11,10 @@ public class Fattura {
 	private float pagamento;
 	private String utente;
 	
-	
-	public Fattura(){
+    /**
+     * Costruttore, esso setta le variabili di stato
+     */
+    public Fattura(){
 		setFattura(0);
 		setData(null);
 		setCosto_totale(0);
@@ -17,43 +23,88 @@ public class Fattura {
 		
 	}
 
-	public int getFattura() {
+    /**
+     * Ritorna l'identificativo della fattura
+     * @return CodiceFattura
+     */
+    public int getFattura() {
 		return this.CodiceFattura;
 	}
 
-	public void setFattura(int fattura) {
+    /**
+     * Setta l'identificativo della fattura
+     * @param fattura
+     */
+    public void setFattura(int fattura) {
 		this.CodiceFattura = fattura;
 	}
 
-	public String getData() {
+    /**
+     * Ritorna la data di emissione della fattura
+     * @return data
+     */
+    public String getData() {
 		return data;
 	}
 
-	public void setData(String data) {
+    /**
+     * Setta la data di emissione della fattura
+     * @param data
+     */
+    public void setData(String data) {
 		this.data = data;
 	}
 
-	public float getCosto_totale() {
+    /**
+     * Ritorna il la spesa del cliente
+     * post: costototale maggiore 0
+     * @return costototale
+     */
+    public float getCosto_totale() {
 		return costototale;
 	}
 
-	public void setCosto_totale(float costototale) {
+    /**
+     * Setta il totale che il cliente deve pagare
+     * @param costototale
+     * pre: costototale maggiore di 0
+     */
+    public void setCosto_totale(float costototale) {
 		this.costototale = costototale;
 	}
 
-	public float getPagamento() {
+    /**
+     * ritorna il pagamento emesso
+     * @return pagamento
+     */
+    public float getPagamento() {
 		return pagamento;
 	}
 
-	public void setPagamento(float pagamento) {
+    /**
+     * Setta il pagamento emesso
+     * @param pagamento
+     */
+    public void setPagamento(float pagamento) {
 		this.pagamento = pagamento;
 	}
 
-	public String getCliente() {
+    /**
+     * Ritorna l'identificativo del cliente 
+     * @return utente
+     * post: utente!=null
+     */
+    public String getCliente() {
 		return utente;
 	}
 
-	public void setCliente(String utente) {
+    /**
+     * Setto l'identificativo del cliente
+     * @param utente
+     * pre: utente!=null
+     */
+    public void setCliente(String utente) {
 		this.utente = utente;
 	}
+
 }
