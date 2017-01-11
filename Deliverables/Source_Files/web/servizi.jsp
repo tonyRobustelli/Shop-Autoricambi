@@ -1,3 +1,7 @@
+<%@ include file="header.jsp" %>
+
+<%@ include file="menu.jsp" %>
+
 <div class="bloccocos"> 
     <h1 class="bloccoscricos">
         Servizi	 
@@ -13,3 +17,6 @@
 
     <img src="images/777.jpg">
 </section>
+
+
+<%@ include file="footer.jsp" %>
