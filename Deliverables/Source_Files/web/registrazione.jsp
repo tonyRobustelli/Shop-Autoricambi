@@ -1,3 +1,6 @@
+<%@ include file="header.jsp" %>
+
+<%@ include file="menu.jsp" %>
 
 </header>
 <div class="bloccocos"> 
@@ -15,3 +18,6 @@
 
     <img src="images/pattini_scheda.jpg">
 </section>
+
+
+<%@ include file="footer.jsp" %>
