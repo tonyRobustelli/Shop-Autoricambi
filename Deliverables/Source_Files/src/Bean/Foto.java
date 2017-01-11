@@ -21,6 +21,7 @@ public class Foto{
     /**
      * Ritorna l'identificativo di un oggetto prodotto
      * @return prodotto 
+     * post: prodotto!=null
      */
     public String getProdotto() {
         return prodotto;
@@ -29,6 +30,7 @@ public class Foto{
     /**
      * Setta l'identificativo di un oggetto prodotto
      * @param prodotto
+     * pre: prodotto!=null
      */
     public void setProdotto(String prodotto) {
         this.prodotto = prodotto;
@@ -37,6 +39,7 @@ public class Foto{
     /**
      * Ritorna il path della foto  
      * @return path
+     * post: path!=null
      */
     public String getPath() {
         return path;
@@ -45,6 +48,7 @@ public class Foto{
     /**
      * Setta il path della foto
      * @param path
+     * pre: path!=null
      */
     public void setPath(String path) {
         this.path = path;
