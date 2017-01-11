@@ -19,16 +19,32 @@ import Bean.Prodotto;
 import Bean.ProdottoFoto;   
 import DBMS.ConnessioneDatabase;
 
-
+/**
+ * Servlet implementation class Prodotti_Control
+ */
 public class Prodotti_Control extends HttpServlet {
 
-   
+    /**
+     * Empty
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 	
 	}
 	
+    /**
+     * Serve una richiesta http post, per gestire la ricerca dei prodotti, esso richiama
+     * RicercaProdotto_Manager
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
