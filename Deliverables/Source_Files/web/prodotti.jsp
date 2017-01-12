@@ -30,6 +30,9 @@
     <input class="bottone" value="Ricerca" type="submit">
 </form>
 
+<%  utente = (Utente) session.getAttribute("Utente");
+            if (utente != null) {
+                if (utente.isAmministratore()) {%>
 <br><br>
 <h2 class="testoarticoli">Carica dei prodotti nel magazzino</h2>
 <form class="shop" method="post" action="regprod"  name="regp" onSubmit="return ControllaProdotti()" >
@@ -52,23 +55,37 @@
     <input   type="submit" value="Inserisci" class="bottone">
     <br>			   
 </form>
-
+<%}
+        }%>
 
 <section class="prodotti">
 
-   
+    <%
+        RicercaProdotto_Manager ser = new RicercaProdotto_Manager();
+        ArrayList<ProdottoFoto> array_prodotto = ser.lista_prodotti();
+        ProdottoFoto prodotto_foto = new ProdottoFoto();
+        Prodotto prodotto_bean = new Prodotto();
+        Foto foto_bean = new Foto();
+
+        for (int i = 0; i < array_prodotto.size(); i++) {
+
+            prodotto_foto = array_prodotto.get(i);
+            foto_bean = prodotto_foto.getFoto_bean();
+            prodotto_bean = prodotto_foto.getProdotto_bean();
+
+    %>
     <div class="prodotto_singolo">
         <a href="scheda.jsp?cod_pezzo=<%=prodotto_bean.getCod_pezzo()%>" ><img src="images/path" ></a>
-        <p>descrizione</p>
-        <span>
-            <del style="color:#747575;">50&euro; </del>20&euro;
-             </span>
+        <p><%=prodotto_bean.getDescrizione()%></p>
+        <span><% if (prodotto_bean.isOfferta()) {%> 
+            <del style="color:#747575;"><%=prodotto_bean.getPrezzo()%>&euro; </del> <%=prodotto_bean.getPrezzo_scontato()%>&euro; <%}%> 
+            <% if (!prodotto_bean.isOfferta()) {%> <%=prodotto_bean.getPrezzo()%>&euro; <%}%> </span>
         <br><br>
         <a class="det_prod" href="scheda.jsp?cod_pezzo=<%=prodotto_bean.getCod_pezzo()%>" >dettagli</a>
 
     </div>
 
-    
+    <% }%>
 </section>
 
 
