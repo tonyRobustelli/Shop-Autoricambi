@@ -11,10 +11,17 @@ import DBMS.ConnessioneDatabase;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-
+/**
+ * Classe che gestisce la tansazione inerente alla registrazione
+ */
 public class Registrazione_Manager  {
     
-
+    /**
+     * Metodo che si occupa di gestire la transazione inerente alla registrazione
+     * @param utente - oggetto Utente che si vuole registrare sul database
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public void SalvaCliente(Utente utente) throws ClassNotFoundException, SQLException
     {
         System.out.println("giovanotto le si sta registrando");
@@ -63,7 +70,17 @@ public class Registrazione_Manager  {
     }
     
     
-    
+    /*Controllo che l'utente non sia stato gi� registrato*/
+
+    /**
+     * Metodo che verifica se già esiste un codice fiscale nel database
+     * @param codice_fiscale - il codice fiscale che si vuole controllare
+     * pre: codice_fiscale.length() == 16
+     * @return restituisce true se il cliente non è registrato, false altrimenti
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
+
     public boolean ControllaRegistrazioneUtente(String codice_fiscale) throws ClassNotFoundException, SQLException
     {
         Connection conn=(Connection) ConnessioneDatabase.getConnection();
