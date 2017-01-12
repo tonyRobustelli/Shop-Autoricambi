@@ -1,3 +1,7 @@
+<%@ include file="header.jsp" %>
+
+<%@ include file="menu.jsp" %>
+
 </header>
 <div class="bloccocos"> 
     <h1 class="bloccoscricos">
@@ -14,4 +18,7 @@
 
     <img src="images/777.jpg">
 </section>
+
+
+<%@ include file="footer.jsp" %>
 
