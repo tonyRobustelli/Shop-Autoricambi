@@ -1,4 +1,10 @@
 
+<%@ include file="header.jsp" %>
+
+<%@ include file="menu.jsp" %>
+<%@ page contentType="text/html; charset=UTF-8" import="java.util.*,Bean.*,ricerca.*"%>
+
+
 
 </header>
 <div class="bloccocos"> 
@@ -62,10 +68,11 @@
 
     </div>
 
-
+    
 </section>
 
 
 
 
 
+<%@ include file="footer.jsp" %>
