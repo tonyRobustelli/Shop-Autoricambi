@@ -11,16 +11,25 @@ import javax.servlet.http.HttpSession;
 
 import Bean.Utente;
 
-
+/**
+ * Classe che fornisce il servizio per effettuare il Login
+ */
 public class Login_Control extends HttpServlet{
     
-  
+    /**
+     * Costruttore Vuoto
+     */
     public Login_Control()
     {
         super();
     }
     
-   
+    /**
+     * Effettua una richiesta HTTP GET per effettuare il login
+     * @param request
+     * @param response 
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException
     {
         
@@ -58,7 +67,12 @@ public class Login_Control extends HttpServlet{
         }
     }
     
-   
+    /**
+     * Effettua una richiesta HTTP POST per il login
+     * @param request
+     * @param response
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException
     {
         doGet(request,response);
