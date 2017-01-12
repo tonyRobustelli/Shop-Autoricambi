@@ -1,3 +1,7 @@
+<%@ include file="header.jsp" %>
+<%@ include file="menu.jsp" %>
+<%@ page contentType="text/html; charset=UTF-8" import="java.util.*"%>
+
 </header>
 <div class="bloccocos"> 
     <div class="bloccoscricos">
@@ -19,3 +23,5 @@
 
     <input class="bottone" value="Ricerca" type="submit">
 </form>
+
+<%@ include file="footer.jsp" %>
