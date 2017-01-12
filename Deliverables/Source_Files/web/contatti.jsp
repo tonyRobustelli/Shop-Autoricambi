@@ -1,3 +1,6 @@
+<%@ include file="header.jsp" %>
+
+<%@ include file="menu.jsp" %>
 
 </header>
 <div class="bloccocos"> 
@@ -50,3 +53,5 @@
     </div>
 
 </section>
+
+<%@ include file="footer.jsp" %>
