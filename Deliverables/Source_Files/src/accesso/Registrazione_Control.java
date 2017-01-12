@@ -15,15 +15,26 @@ import javax.servlet.http.HttpServletResponse;
 
 import Bean.Utente;
 
-
+/**
+ * Classe che fornisce il servizio per effettuare la registrazione
+ */
 public class Registrazione_Control extends HttpServlet {
-
+    
+    /**
+     * Costruttore Vuoto
+     */
     public Registrazione_Control()
     {
         super();
     }
     
-
+    /**
+     * Effettua una richiesta HTTP GET per effettuare la registrazione
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException
     {
         //prelevo i dati dal form
@@ -73,7 +84,14 @@ public class Registrazione_Control extends HttpServlet {
         
         
     }
-
+    
+    /**
+     * Effettua una richiesta HTTP POST per effettuare la registrazione
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException
     {
         doGet(request,response);
