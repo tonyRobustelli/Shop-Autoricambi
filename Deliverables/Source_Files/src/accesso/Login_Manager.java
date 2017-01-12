@@ -10,10 +10,19 @@ import DBMS.ConnessioneDatabase;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-
+/**
+ * Classe che gestisce la tansazione inerente al login
+ */
 public class Login_Manager {
     
-  
+    /**
+     * Metodo che verifica la correttezza delle credenziali di login accesso
+     * @param e_m email utilizzata per il login
+     * @param pass password utilizzata per il login
+     * @return restituisce l'oggetto cliente se le credenziali sono presenti nel database 
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public Utente ControllaLogin(String e_m,String pass) throws ClassNotFoundException, SQLException
     {
         
