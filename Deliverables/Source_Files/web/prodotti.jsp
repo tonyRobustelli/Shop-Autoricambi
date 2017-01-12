@@ -75,7 +75,7 @@
 
     %>
     <div class="prodotto_singolo">
-        <a href="scheda.jsp?cod_pezzo=<%=prodotto_bean.getCod_pezzo()%>" ><img src="images/path" ></a>
+        <a href="scheda.jsp?cod_pezzo=<%=prodotto_bean.getCod_pezzo()%>" ><img src="images/<%=foto_bean.getPath()%>" ></a>
         <p><%=prodotto_bean.getDescrizione()%></p>
         <span><% if (prodotto_bean.isOfferta()) {%> 
             <del style="color:#747575;"><%=prodotto_bean.getPrezzo()%>&euro; </del> <%=prodotto_bean.getPrezzo_scontato()%>&euro; <%}%> 
