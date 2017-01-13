@@ -176,4 +176,13 @@ background-position: center;
 
 
 
+/*********************** PRODOTTI *********************************/
+form.form_prodotti .inp {
+    width: 85%;
+}
+
+form.form_prodotti .bottone {
+    width: 85%;
+}
+
 
