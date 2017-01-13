@@ -296,4 +296,91 @@
 	     return false;
 	    }
      }    	
- 
+    	
+/**********************Validazione form inserimento prodotto amministratore*****************************/
+		     
+		     function ControllaProdotti()
+			    {
+			    	var codp=document.regp.cod_pezz.value;
+			    	var mar=document.regp.marchio.value;
+			    	var mode=document.regp.modello.value;
+			    	var pre=document.regp.prezzo.value;
+			    	var prescont=document.regp.prescont.value;
+			    	var desc=document.regp.descri.value;
+			    	var qua=document.regp.quanti.value;
+			    
+			    	alert("Sono entrato nei controlli");
+			    	
+			    	/*****Controllo campo  codice pezzo*****/
+			    	if (codp == null || codp == "" ) {
+				        alert("Il campo codice del pezzo e' obbligatorio");
+				        document.regp.cod_pezz.focus();
+				        return false;
+				    }
+			    	
+			    	/*****Controllo campo  marchio*****/
+			    	if (mar == null || mar == "" ) {
+				        alert("Il campo marchio e' obbligatorio");
+				        document.regp.marchio.focus();
+				        return false;
+				    }
+			    	
+			    	/*****Controllo campo modello*****/
+			    	if (mode == null || mode == "" ) {
+				        alert("Il campo codice del pezzo e' obbligatorio");
+				        document.regp.modello.focus();
+				        return false;
+				    }
+			    	
+			    	/*****Controllo campo prezzo*****/
+			    	if (pre == null || pre == "" ) {
+				        alert("Il campo prezzo e' obbligatorio");
+				        document.regp.marchio.focus();
+				        return false;
+				    }
+			    	
+			    	else if(isNaN(pre))
+			    	{
+				        alert("Il prezzo inserito non è corretto,e' un dato numerico");
+				        document.regp.prezzo.value = "";
+				        document.regp.prezzo.focus();
+				        return false;
+				    }
+			    	
+			    	/*****Controllo campo prezzo scontato*****/
+			    	if (document.regp.offerta.value || prescont >= pre ) {
+				        alert("Il prezzo scontato non è corretto,deve essere inferiore al prezzo di partenza");
+				        document.regp.prescont.focus();
+				        return false;
+				    }
+			    	
+			    	
+			    	/*****Controllo campo  descrizione*****/
+			    	if (desc == null || desc == "" ) {
+				        alert("Il campo descrizione e' obbligatorio");
+				        document.regp.descri.focus();
+				        return false;
+				    }
+			    	
+			    	/*****Controllo campo quantità*****/
+			    	if (qua == null || qua == "" ) {
+				        alert("Il campo codice del pezzo e' obbligatorio");
+				        document.regp.quanti.focus();
+				        return false;
+				    }
+			    	
+			    	else if(isNaN(qua))
+			    	{
+				        alert("La quantità inserita non è corretta,e' un dato numerico");
+				        document.regp.quanti.value = "";
+				        document.regp.quanti.focus();
+				        return false;
+				    }
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    }	     
+		     
