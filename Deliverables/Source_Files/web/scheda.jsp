@@ -42,6 +42,85 @@
 
 
 <section class="scheda">
+    <div class="scheda_img">
+        <%
+            RicercaProdotto_Manager query = new RicercaProdotto_Manager();
+            String cod = (String) request.getParameter("cod_pezzo");
+            ArrayList<Foto> array_foto = query.scheda_tecnica_foto(cod);
+        %>
+
+        <span class="fot">
+            <img id="0" class="scheda_img_grd_vis" src="images/<%=array_foto.get(0).getPath()%>">
+            <%
+                for (int i = 1; i < array_foto.size(); i++) {
+            %>
+            <img id=<%=i%> class="scheda_img_grd_invis" src="images/<%=array_foto.get(i).getPath()%>">
+            <%}%>
+        </span>
+
+        <div style="float:right; width:28%;">
+            <% for (int i = 0; i < array_foto.size(); i++) {%>
+            <img id=<%=i%> class="scheda_img_pic" src="images/<%=array_foto.get(i).getPath()%>"><%
+            }%>
+        </div>
+    </div>
+
+    <%
+
+        Prodotto prodotto = query.scheda_tecnica_prodotto(cod);
+
+    %>
+    <div class="scheda_dati">
+        <div class="titolo"><%=prodotto.getDescrizione()%> </div>
+        <div class="caratt"><%=prodotto.getMarchio()%> <%=prodotto.getModello()%> </div>
+        <div class="dati"><span class="euro">EURO</span><span class="prezzo"><%=prodotto.getPrezzo_scontato()%></span></div>
+
+        <form name="campqua" action="CarrelloControl" method="post" onsubmit="return ControllaQuantita()">
+            <input type="hidden" name="cod_pezzo" value="<%=prodotto.getCod_pezzo()%>">
+            Quantita':<input  class="quantita" type="text" name="quantita" placeholder="Quantità">
+            <input class="bottone" type="submit" value="Aggiungi la carrello">
+        </form>
+
+    </div>
+
+
+
+
+</section>
+
+
+
+<section class="prodotti">
+    <%
+        RicercaProdotto_Manager ser = new RicercaProdotto_Manager();
+        ArrayList<ProdottoFoto> array_prodotto = ser.lista_prodotti();
+        ProdottoFoto prodotto_foto = new ProdottoFoto();
+        Prodotto prodotto_bean = new Prodotto();
+        Foto foto_bean = new Foto();
+
+        for (int i = 0; i < array_prodotto.size() && i < 4; i++) {
+
+            prodotto_foto = array_prodotto.get(i);
+            foto_bean = prodotto_foto.getFoto_bean();
+            prodotto_bean = prodotto_foto.getProdotto_bean();
+            if (cod.equals(prodotto_bean.getCod_pezzo())) {
+                continue;
+            }
+    %>
+    <div class="prodotto_singolo">
+        <a href="scheda.jsp?cod_pezzo=<%=prodotto_bean.getCod_pezzo()%>" ><img src="images/<%=foto_bean.getPath()%>" ></a>
+        <p><%=prodotto_bean.getModello()%></p>
+
+        <span><% if (prodotto_bean.isOfferta()) {%> 
+            <del style="color:#747575;"><%=prodotto_bean.getPrezzo()%>&euro; </del> <%=prodotto_bean.getPrezzo_scontato()%>&euro; <%}%> 
+            <% if (!prodotto_bean.isOfferta()) {%> <%=prodotto_bean.getPrezzo()%>&euro; <%}%> </span>
+
+
+        <br><br>
+        <a class="det_prod" href="scheda.jsp?cod_pezzo=<%=prodotto_bean.getCod_pezzo()%>">dettagli</a>
+    </div>
+
+    <% }%>
 
 </section>
 
