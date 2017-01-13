@@ -197,3 +197,59 @@ form.form_prodotti .bottone {
     width: 69%;
 }
 
+
+/*************Che cos'e shop-autoricambi*********************************/
+.articoli {
+   
+    width: 96%;
+}
+
+.formemail
+{
+    width:88%;
+}   
+
+.formcitta
+{
+    width:88%;
+    margin-left:4%;
+}
+
+.formcap
+{
+    width:88%;
+    margin-left:4%;
+    
+}
+
+.formvia
+{
+    width:88%;
+}
+
+.formtele
+{
+    width:88%;
+}
+.formemoff
+{
+    width:88%;
+    margin-left:4%;
+}
+
+.formofficina
+{
+    width:100%;
+}
+
+/********* shop autoricambi ***/
+.shop_dx{
+  float: right;
+  width: 0%;
+}
+
+.shop_dx img{
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
