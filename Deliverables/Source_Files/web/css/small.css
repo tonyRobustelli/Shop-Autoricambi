@@ -1,0 +1,255 @@
+
+nav{
+	
+}
+.senza_nav_ul{
+	display:none;
+}
+.con_nav_ul{
+	display:block;
+	
+}
+nav.senza_nav{
+	width:100px;
+	height: 30px;
+	background-color: #23406d;
+    background-image: none;
+    color: #fff;
+    margin-left: calc(50% - 50px);
+    margin-top: 23px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+	
+}
+
+nav.con_nav{
+	background-color: white;
+    background-image: none;
+    background-repeat: repeat-x;
+    color: #000;
+    float: left;
+    height: auto;
+    margin-left: 2%;
+    margin-top: 5px;
+    padding: 10px 0;
+    position: absolute;
+    text-decoration: none;
+    width: 90%;
+    z-index: 1;
+	
+}
+nav p{
+	margin-top: 6px;
+	display:block;
+}
+aside form{
+	
+    float: left;
+    margin-left: calc(50% - 130px);
+
+}
+
+aside {
+   
+    height: 500px;
+   
+}
+
+.image_menu_rap
+{ 
+
+   width: 80%;
+   
+}
+
+.menu_rap {
+    height: 660px;
+}
+
+.prodotti .prodotto_singolo {
+
+    width: 80%;
+}
+
+.prodotti {
+    height: 1373px;
+}
+
+@media screen and (max-width: 550px) {
+    .prodotti {
+    height: 1195px;
+}
+}
+
+@media screen and (max-width: 430px) {
+    .prodotti {
+    height: 980px;
+}
+}
+
+@media screen and (max-width: 330px) {
+    .prodotti {
+    height: 770px;
+}
+}
+
+
+.image_partners {
+    width: 80%;
+}
+
+.menu_partners {
+    height: 660px;
+}
+
+.icona_logo {
+    
+    width: 30px;
+}
+
+.scritta_logo {
+  
+    font-size: 100%;
+  
+}
+
+nav ul {
+      margin-left: -40px;
+    }
+
+ nav li {
+      width: 100%;
+        text-align: center;
+    }
+   
+   nav ul li:first-child {
+  
+  background-image: url("../images/home.png");
+margin-left: -20px;
+  background-repeat: repeat-y;
+background-position: center;
+   
+}
+
+
+.prodotti span.prezzo_prec {
+ 
+    font-size: 14px;
+   
+}
+
+.prodotti span {
+  
+    font-size: 14px;
+}
+
+
+.prodotti p {
+  
+    font-size: 14px;
+}
+
+
+
+/********************PRODOTII****************************/
+.bloccocos {
+    background-color: #b3dfea;
+    background-image: url("../images/logo_prodotti.png");
+    background-position: 128% 110%;
+    background-repeat: no-repeat;
+    background-size: 151px auto;
+    margin-top: 75px;
+    padding: 3% 3% 22px;
+}
+
+
+.bloccoscricos {
+    color: #1e4177;
+    font-family: arial;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 1px;
+    padding-top: 140px;
+    text-align: left;
+}
+
+
+
+/*********************** PRODOTTI *********************************/
+form.form_prodotti .inp {
+    width: 85%;
+}
+
+form.form_prodotti .bottone {
+    width: 85%;
+}
+
+
+/*****************************SCHEDA********************/
+
+.scheda_img_pic {
+   opacity: 1;
+   
+}
+
+.scheda_img_grd {
+    width: 69%;
+}
+
+
+/*************Che cos'e shop-autoricambi*********************************/
+.articoli {
+   
+    width: 96%;
+}
+
+.formemail
+{
+    width:88%;
+}   
+
+.formcitta
+{
+    width:88%;
+    margin-left:4%;
+}
+
+.formcap
+{
+    width:88%;
+    margin-left:4%;
+    
+}
+
+.formvia
+{
+    width:88%;
+}
+
+.formtele
+{
+    width:88%;
+}
+.formemoff
+{
+    width:88%;
+    margin-left:4%;
+}
+
+.formofficina
+{
+    width:100%;
+}
+
+/********* shop autoricambi ***/
+.shop_dx{
+  float: right;
+  width: 0%;
+}
+
+.shop_dx img{
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
