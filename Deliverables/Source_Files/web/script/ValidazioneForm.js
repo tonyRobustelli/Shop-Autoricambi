@@ -91,4 +91,209 @@
 	       return false;
 	    }
  }    
+	 
+	
+ 
+ 
+ 
+       /*************************Controlli form registrazione Cliente****************/
+	    function ControllaCliente()
+	    {
+	    	var nome=document.regcli.nome.value;
+	    	var cog=document.regcli.cognome.value;
+	    	var codfi=document.regcli.codicefiscale.value;
+	    	var datna=document.regcli.datanascita.value;
+	    	var tel=document.regcli.telefono.value;
+	    	var cell=document.regcli.cellulare.value;
+	    	var via=document.forms["regcli"]["via"].value;
+	    	var cap=document.regcli.cap.value;
+	    	var citta=document.regcli.citta.value;
+	    	var emai=document.regcli.email.value;
+	    	var pass=document.regcli.psw.value;
+	    	var copass=document.regcli.pswconf.value;
+	    	var pattern = /^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$/; ///Controllo validità codice fiscale
+	    	var email_reg_exp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-]{2,})+\.)+([a-zA-Z0-9]{2,})+$/;  //espressione regolare per validare email
+	    	
+	    	  /***Controllo validità campo nome***/
+	    	if(nome==null || nome=="")
+	  	    {
+	  	        alert("Il campo nome e' obbligatorio"+via);
+	  	        document.regcli.nome.focus();
+	  	        return false;
+	  	    }
+	    	
+	    	
+	    	  /***Controllo validità campo cognome***/
+	    	else if(cog==null || cog=="")
+	  	    {
+	  	        alert("Il campo cognome e' obbligatorio");
+	  	        document.regcli.cognome.focus();
+	  	        return false;
+	  	    }
+	    	
+	    	
+	    	/***Controllo validità campo codice fiscale***/
+	    	else if(codfi==null || codfi=="")
+	  	    {
+	  	        alert("Il campo codice fiscale e' obbligatorio");
+	  	        document.regcli.codicefiscale.focus();
+	  	        return false;
+	  	    }
+	    	
+	    	else if(codfi.search(pattern) == -1)
+	    	  {
+	    	    // In caso di errore stampo un avviso e pulisco il campo...
+	    	    alert("Il valore inserito non e' un codice fiscale!");
+	    	    document.regcli.codicefiscale.value = "";
+	    	    document.regcli.codicefiscale.focus();
+	    	    return false;
+	    	  }
+	    	
+	    	/***Controllo validità campo data di nascita**/
+	    	else if(datna==null || datna=="")
+	  	    {
+	  	        alert("Il campo data di nascita e' obbligatorio");
+	  	        document.regcli.datanascita.focus();
+	  	        return false;
+	  	    }
+	    	
+	    	else if (document.regcli.datanascita.value.substring(2,3) != "/" ||
+	                document.regcli.datanascita.value.substring(5,6) != "/" ||
+	                isNaN(document.regcli.datanascita.value.substring(0,2)) ||
+	                isNaN(document.regcli.datanascita.value.substring(3,5)) ||
+	                isNaN(document.regcli.datanascita.value.substring(6,10))) {
+	            
+	           alert("Inserire una data di nascita in formato gg/mm/aaaa");
+	           document.regcli.datanascita.value = "";
+	           document.regcli.datanascita.focus();
+	           return false;
+	       }
+	      
+	    	else if (document.regcli.datanascita.value.substring(0,2) > 31) {
+	           alert("Impossibile utilizzare un valore superiore a 31 per i giorni");
+	           document.regcli.datanascita.select();
+	           return false;
+	       }
+	    	
+	    	else if (document.regcli.datanascita.value.substring(0,2) < 1) {
+		           alert("Impossibile utilizzare un valore inferiore a 1 per i giorni");
+		           document.regcli.datanascita.select();
+		           return false;
+		       }
+	    	
+	       else if (document.regcli.datanascita.value.substring(3,5) > 12) {
+	           alert("Impossibile utilizzare un valore superiore a 12 per i mesi");
+	           document.regcli.datanascita.value = "";
+	           document.regcli.datanascita.focus();
+	           return false;
+	       }
+	    	
+	       else if (document.regcli.datanascita.value.substring(3,5) < 1) {
+	           alert("Impossibile utilizzare un valore inferiore a 1 per i mesi");
+	           document.regcli.datanascita.value = "";
+	           document.regcli.datanascita.focus();
+	           return false;
+	       }
+	    	
+	       else if (document.regcli.datanascita.value.substring(6,10) < 1900) {
+	           alert("Impossibile utilizzare un valore inferiore a 1900 per l'anno");
+	           document.regcli.datanascita.value = "";
+	           document.regcli.datanascita.focus();
+	           return false;
+	       }
+	    	
+	    	/*****Controlli sulla validità del telefono*****/
+		    
+		    if(tel!=null || tel!="")
+		    {	
+		    	if(isNaN(tel) || tel.length<7)
+		        {
+		         alert("Il numero di telefono inserito non e' corretto,e' un dato numerico");
+		         document.regcli.telefono.value = "";
+		         document.regcli.telefono.focus();
+		         return false;
+		        }
+		    } 	
+		    	
+	    	
+	    	/*****Controlli sulla validità del cellulare*****/
+		    else if (cell == "" || cell == null) {
+		    	   alert("Il campo cellulare e' obbligatorio.");
+		    	   document.regcli.cellulare.focus();
+		    	   return false;
+		    	}
+		    
+		    else if(isNaN(cell) || cell.length<7)
+		    {
+		        alert("Il numero di cellulare inserito non e' corretto,e' un dato numerico");
+		        document.regcli.cellulare.value = "";
+		        document.regcli.cellulare.focus();
+		        return false;
+		    }
+	    	
+	    	/*****Controlli sulla validità della via*****/
+		     if(via==null || via=="")
+		    {
+		        alert("Il campo  via e' obbligatorio");
+		        document.regcli.via.focus();
+		        return false;
+		    }
+		    
+		    
+		    /*****Controlli sulla validità del cap*****/
+		    else if(cap==null || cap=="")
+		    {
+		        alert("Il campo cap e' obbligatorio");
+		        document.regcli.cap.focus();
+		        return false;
+		    }
+		    
+		    else if(cap.length<5 || cap.length>5 || isNaN(cap))
+		    {
+		        alert("Il cap inserito non e' corretto,e' un dato numerico");
+		        document.regcli.cap.value = "";
+		        document.regcli.cap.focus();
+		        return false;
+		    }
+	    	
+	    	/*****Controlli sulla validità del città*****/
+		    else if(citta==null || citta=="")
+		    {
+		        alert("Il campo citta' e' obbligatorio");
+		        document.regcli.citta.focus();
+		        return false;
+		    }
+	    	
+	    	/*****Controlli sulla validità della mail*****/
+		    else if (!email_reg_exp.test(emai) || (emai == "") || (emai == null)) {
+		       alert("Inserire un indirizzo email corretto.");
+		       document.regcli.email.select();
+		       return false;
+		    }
+	    	
+	    	/*****Controlli sulla validità della password*****/
+		    else if(pass=="" || pass==null)
+		    {
+		     alert("Il campo password e' obbligatorio");
+		     document.regcli.psw.focus();
+		     return false;
+		    }
+	    	
+		    else if(pass.length<8 || pass.substring(0,1)<"A" || pass.substring(0,1)>"Z" || isNaN(pass.substring(pass.length-1,pass.length) )) //Ci deve essere una lettera maiuscola all'inizio ed un numero alla fine
+		    {
+			     alert("Password inserita non rispetta i requisiti di sicurezza"+pass.length);
+			     document.regcli.psw.value = "";
+			     document.regcli.psw.focus();
+			     return false;
+			}
+	    
+	    /*****Controlli sulla validità della conferma password*****/
+	    else if(copass=="" || copass==null  || pass!=copass)
+	    {
+	     alert("Riconferma la password");
+	     document.regcli.pswconf.value="";
+	     document.regcli.pswconf.focus();
+	     return false;
+	    }
+     }    	
  
