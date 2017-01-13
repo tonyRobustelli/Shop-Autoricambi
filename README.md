@@ -2,7 +2,7 @@
 
 Obiettivo del progetto:
 
-Il sito di commercio elettronico che si vuole realizzare è concepito sull’idea di dare la possibilità, a dei clienti, di acquistare pezzi di ricambio per automobili. Il sito, inoltre, intende pubblicizzare le componenti di ricambio da esso vendute permettendo, inoltre, ai clienti la possibilità di affiliarsi a delle officine presso le quali effettuare il montaggio, in presenza di personale qualificato, delle componenti acquistate.
+Il sito di commercio elettronico che si vuole realizzare è concepito sull’idea di dare la possibilità, a dei clienti, di acquistare pezzi di ricambio per automobili. Il sito, inoltre, intende pubblicizzare le componenti di ricambio da esso vendute.
 
 
 Funzionalità del sito:
@@ -12,8 +12,6 @@ Le funzionalità del sito che si vuole realizzare sono, principalmente, le segue
 - Registrazione degli utenti
 
 - Possibilità di acquistare pezzi di ricambio per la propria auto
-
-- Possibilità di affiliarsi ad officine presso cui montare i pezzi acquistati
 
 - Informazioni e contatti
 
