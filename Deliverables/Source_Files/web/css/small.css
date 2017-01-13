@@ -186,3 +186,14 @@ form.form_prodotti .bottone {
 }
 
 
+/*****************************SCHEDA********************/
+
+.scheda_img_pic {
+   opacity: 1;
+   
+}
+
+.scheda_img_grd {
+    width: 69%;
+}
+
