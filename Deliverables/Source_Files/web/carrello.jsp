@@ -1,3 +1,7 @@
+<%@ include file="header.jsp" %>
+<%@ include file="menu.jsp" %>
+<%@ page contentType="text/html; charset=UTF-8" import="javax.servlet.http.*,java.util.*"%>
+
 </header>
 <div class="bloccocos"> 
     <h1 class="bloccoscricos">
@@ -14,3 +18,5 @@
 
     <img src="images/pattini_scheda.jpg">
 </section>
+
+<%@ include file="footer.jsp" %>
