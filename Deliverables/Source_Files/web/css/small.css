@@ -152,6 +152,28 @@ background-position: center;
 
 
 
+/********************PRODOTII****************************/
+.bloccocos {
+    background-color: #b3dfea;
+    background-image: url("../images/logo_prodotti.png");
+    background-position: 128% 110%;
+    background-repeat: no-repeat;
+    background-size: 151px auto;
+    margin-top: 75px;
+    padding: 3% 3% 22px;
+}
+
+
+.bloccoscricos {
+    color: #1e4177;
+    font-family: arial;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 1px;
+    padding-top: 140px;
+    text-align: left;
+}
+
 
 
 
