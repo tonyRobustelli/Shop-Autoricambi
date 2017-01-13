@@ -1,3 +1,7 @@
+<%@ include file="header.jsp" %>
+<%@ include file="menu.jsp" %>
+<%@ page contentType="text/html; charset=UTF-8" import="storico.*"%>
+
 <script>
     window.navigate("index.jsp")
   
@@ -23,3 +27,5 @@
 
     <img src="images/pattini_scheda.jpg">
 </section>
+
+<%@ include file="footer.jsp" %>
