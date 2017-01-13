@@ -382,5 +382,34 @@
 			    	
 			    	
 			    	
-			    }	     
+			    }
 		     
+		     
+
+		     
+		     
+		     
+		     
+/**********************Validazione quantità*****************************/
+
+		     function ControllaQuantita()
+			    {
+		    	 var quanti=document.campqua.quantita.value;
+		    	  
+		    	    if(quanti==null || quanti=="")
+		    	    	{
+		    	    	 alert("Inserisci una quantita' di prodotto");
+				         document.campqua.quantita.focus();
+				         return false;
+		    	    	}
+		    	    
+		    	    else if(isNaN(quanti))
+			    	{
+				        alert("La quantità inserita non è corretta,e' un dato numerico");
+				        document.campqua.quantita.value = "";
+				        document.campqua.quantita.focus();
+				        return false;
+				    }
+		    	    	
+		    	 
+			    }		     
