@@ -7,6 +7,7 @@
 	 var citta= document.forms["inspartner"]["citta"].value;
 	 var cap= document.forms["inspartner"]["cap"].value;
 	 var tele= document.forms["inspartner"]["telefono"].value;
+         var cell= document.forms["inspartner"]["cellulare"].value;
 	 var emoff= document.forms["inspartner"]["email_offi"].value;
 	 var email_reg_exp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-]{2,})+\.)+([a-zA-Z0-9]{2,})+$/;  //espressione regolare per validare email
 	 
@@ -81,6 +82,23 @@
 	        document.inspartner.telefono.focus();
 	        return false;
 	    }
+            
+            
+            /*****Controlli sulla validità del cellulare*****/
+	    else if ((cell == "") || (cell == null)) {
+	    	   alert("Il campo cellulare e' obbligatorio.");
+	    	   document.inspartner.cell.focus();
+	    	   return false;
+	    	}
+	    
+	    else if(isNaN(cell) || cell.length<7)
+	    {
+	        alert("Il cellulare inserito non e' corretto,e' un dato numerico");
+	        document.inspartner.cellulare.value = "";
+	        document.inspartner.cellulare.focus();
+	        return false;
+	    }
+	    
 	    
 	    
 	    
@@ -117,7 +135,7 @@
 	    	  /***Controllo validità campo nome***/
 	    	if(nome==null || nome=="")
 	  	    {
-	  	        alert("Il campo nome e' obbligatorio"+via);
+	  	        alert("Il campo nome e' obbligatorio");
 	  	        document.regcli.nome.focus();
 	  	        return false;
 	  	    }
@@ -301,7 +319,7 @@
 		     
 		     function ControllaProdotti()
 			    {
-			    	var codp=document.regp.cod_pezz.value;
+			    	var codp=document.regp.cod_pez.value;
 			    	var mar=document.regp.marchio.value;
 			    	var mode=document.regp.modello.value;
 			    	var pre=document.regp.prezzo.value;
@@ -309,47 +327,50 @@
 			    	var desc=document.regp.descri.value;
 			    	var qua=document.regp.quanti.value;
 			    
-			    	alert("Sono entrato nei controlli");
+			    	
 			    	
 			    	/*****Controllo campo  codice pezzo*****/
-			    	if (codp == null || codp == "" ) {
-				        alert("Il campo codice del pezzo e' obbligatorio");
-				        document.regp.cod_pezz.focus();
+			    	if (codp == null || codp == "" || codp.length>20 ) {
+				        alert("Il campo codice del pezzo e' obbligatorio o troppo lungo");
+				        document.regp.cod_pez.focus();
 				        return false;
 				    }
 			    	
 			    	/*****Controllo campo  marchio*****/
-			    	if (mar == null || mar == "" ) {
+			    	if (mar == null || mar == "" || mar.length>30) {
 				        alert("Il campo marchio e' obbligatorio");
 				        document.regp.marchio.focus();
 				        return false;
 				    }
 			    	
 			    	/*****Controllo campo modello*****/
-			    	if (mode == null || mode == "" ) {
+			    	if (mode == null || mode == "" || mode.length>30) {
 				        alert("Il campo codice del pezzo e' obbligatorio");
 				        document.regp.modello.focus();
 				        return false;
 				    }
 			    	
 			    	/*****Controllo campo prezzo*****/
-			    	if (pre == null || pre == "" ) {
-				        alert("Il campo prezzo e' obbligatorio");
+                                if(isNaN(pre))
+			    	 {
+				        alert("Il prezzo inserito non è corretto,e' un dato numerico");
 				        document.regp.marchio.focus();
 				        return false;
 				    }
 			    	
-			    	else if(isNaN(pre))
+			    	else if (pre == null || pre == "" || pre<0)
 			    	{
-				        alert("Il prezzo inserito non è corretto,e' un dato numerico");
+				       
+                                        alert("Il prezzo scontato non è corretto,deve essere inferiore al prezzo di partenza");
+				        
 				        document.regp.prezzo.value = "";
 				        document.regp.prezzo.focus();
 				        return false;
 				    }
 			    	
 			    	/*****Controllo campo prezzo scontato*****/
-			    	if (document.regp.offerta.value || prescont >= pre ) {
-				        alert("Il prezzo scontato non è corretto,deve essere inferiore al prezzo di partenza");
+			    	if (document.regp.offerta.value && prescont >= pre ) {
+				        alert("Il prezzo scontato e' maggiore del prezzo ");
 				        document.regp.prescont.focus();
 				        return false;
 				    }
@@ -363,13 +384,14 @@
 				    }
 			    	
 			    	/*****Controllo campo quantità*****/
-			    	if (qua == null || qua == "" ) {
-				        alert("Il campo codice del pezzo e' obbligatorio");
+                                 if(isNaN(qua))
+			    	 {
+				        alert("Il campo quantita non e' un numero");
 				        document.regp.quanti.focus();
 				        return false;
 				    }
 			    	
-			    	else if(isNaN(qua))
+			    	else if (qua == null || qua == "" || qua<0)
 			    	{
 				        alert("La quantità inserita non è corretta,e' un dato numerico");
 				        document.regp.quanti.value = "";
@@ -396,9 +418,9 @@
 			    {
 		    	 var quanti=document.campqua.quantita.value;
 		    	  
-		    	    if(quanti==null || quanti=="")
+		    	    if(quanti==null || quanti=="" || quanti<0)
 		    	    	{
-		    	    	 alert("Inserisci una quantita' di prodotto");
+		    	    	 alert("Inserisci una quantita' di prodotto corretta");
 				         document.campqua.quantita.focus();
 				         return false;
 		    	    	}
@@ -413,3 +435,10 @@
 		    	    	
 		    	 
 			    }		     
+		     
+		     
+		     
+		     
+		     
+		     
+		     
