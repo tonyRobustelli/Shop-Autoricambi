@@ -1,0 +1,1073 @@
+
+
+.alto{
+	 background-color: #23406d;
+    
+    width: 100%;
+    color: #fff;
+}
+.alto p{
+	padding: 2px 2% 2px 0;
+	font-size: 12px; /*cambia per chrome*/
+}
+.logo{
+	margin-left: 1%;
+	width: 100%;
+}
+
+.scritta_logo{
+	color: #23406d;
+    font-size: 127%;
+    font-weight: bold;
+   
+    margin-left: 7px;
+}
+.icona_logo{
+	margin-bottom: -7px;
+
+}
+.box{ /* box a dimensione max crea problemi*/
+	
+	padding: 0.5%;
+	margin: 10px 15px 10px 10px;
+	color: #fff;
+	float: right;
+	background-color: #b94641;
+}
+
+nav{
+	background-image:url("../images/auto_header.png");
+	float: left;
+	width: 90%;
+	background-color: white;
+	margin-left: 5%;
+    margin-top: 5px;
+    background-repeat: repeat-x;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #000;
+
+}
+nav p{
+	display:none;
+}
+
+
+nav ul li a{
+	text-decoration:none;
+	color:#000;
+}
+aside{
+	background-image:url("../images/officina.jpg");
+	 background-repeat: repeat-x;
+	
+	   height: 400px;
+	  margin-top: 70px;
+}
+
+aside form{
+	 background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    float: right;
+    margin-right: 250px;
+    margin-top: 18px;
+    padding: 15px 30px 30px;
+    position: relative;
+    width: 200px;
+}
+
+
+
+
+nav ul li{
+	display: inline;
+	text-decoration: none;
+	float: left;
+	margin-right: 22px;
+	margin-top: 10px;
+	
+}
+nav ul li:first-child {
+	
+	background-image: url("../images/home.png");
+margin-top: 0;
+	padding: 18px;
+	background-repeat: repeat-x;
+
+   
+}
+.menu_rap{
+border-top-style: solid;
+ border-top-width: 5px;
+ border-top-color: #fff;
+   background-color: #23406d;
+    height: 200px;
+    margin-top: -57px;
+
+    width: 100%;
+    
+
+}
+
+
+.image_menu_rap
+{ 
+	border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 60px;
+    width: 11.89%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.image_menu_rap:hover{
+	opacity: 0.5;
+}
+
+.prodotti{
+	background-color: #fff;
+  
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    
+}
+
+.prodotti .prodotto_singolo a img{
+	
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+.prodotti p{
+	
+   color: #000;
+   font-size: 12px;
+   font-family: 12px;
+}
+
+.prodotti span{
+	
+   color: #2cc1a4;
+   font-size: 12px;
+   font-family: 12px;
+}
+.prodotti span.prezzo_prec{
+	
+   color: #747575;
+   font-size: 12px;
+   font-family: 12px;
+   text-decoration: line-through;
+}
+
+
+
+
+.prodotti .prodotto_singolo{
+  border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 50px;
+    padding: 0;
+    text-align: center;
+    width: 11.89%;
+}
+
+.prodotti .prodotto_singolo:hover{
+  opacity: 0.5;
+}
+
+.menu_partners{
+  text-align: center;
+border-top-style: solid;
+ border-top-width: 5px;
+ border-top-color: #fff;
+   background-color: #23406d;
+    height: 250px;
+    margin-top: 50px;
+    transform: rotate(1deg);
+    width: 100%;
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+
+}
+.menu_partners .title{
+  font-size: 18px;
+  font-family: arial;
+  color: #fff;
+}
+
+.image_partners
+{ 
+  border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 36px;
+    width: 11.89%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.image_partners img {
+    font-size: 12px;
+    font-weight: bold;
+    max-height: 125px;
+    text-align: center;
+    width: 150px;
+}
+.image_partners:hover{
+  opacity: 0.5;
+}
+
+.vuoto{
+  width: 100%;
+  margin-bottom: -1px;
+    margin-top: 50px;
+    padding: 15px 0;
+  background-color: #333333;
+  
+    transform: rotate(1deg);
+    
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+}
+
+.vuoto2{
+  width: 100%;
+  padding: 20px 0;
+  background-color: #000;
+    transform: rotate(1deg);
+    
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+}
+
+.foot{
+  width: 100%;
+ margin-top: -15px;
+    padding: 20px 0 50px;
+  background-color: #000;
+  
+  
+}
+
+form p.cerca{
+  color: #fff;
+  font-size:18px;
+  font-family: arial;
+  text-align: center;
+ }
+
+
+form input{
+ width: 100%;
+ }
+
+form input.bottone{
+ background: #23406d none repeat scroll 0 0;
+    border: 1px solid #23406d;
+    color: #fff;
+    cursor: pointer;
+    font: bold 12px Arial,Helvetica,sans-serif;
+    margin-top: 15px;
+    outline: medium none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 102%;
+ }
+
+form input.bottone:hover{
+ opacity: 0.8;
+ }
+
+
+
+
+ /******************************* PRODOTTI ********************************/
+
+
+.bloccocos  /*css blocco testo cos'è shop-autoricambi*/
+{
+  background-color: #b3dfea;
+    background-image: url("../images/logo_prodotti.png");
+    background-position: 102% 77%;
+    background-repeat: no-repeat;
+    background-size: 20% auto;
+    margin-top: 75px;
+    padding: 0;
+ 
+}
+
+.bloccoscricos /*css blocco testo cos'è shop-autoricambi*/
+{
+  color: #1e4177;
+    font-family: arial;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 1px;
+    padding: 30px 15px 15px;
+    text-align: left;
+}
+
+
+form.form_prodotti{
+float: left;
+    margin-left: 9%;
+    text-align: center;
+    width: 100%;
+
+}
+
+form.form_prodotti .inp{
+ background: #23406d ;
+  width: 20%;
+  float: left;
+  margin: 10px 5px 10px 0;
+}
+form.form_prodotti .inp input{
+
+  width: calc(100% - 5px);
+  float: left;
+}
+
+form.form_prodotti .inp p{
+
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+form.form_prodotti .bottone{
+
+   float: left;
+    margin-top: 10px;
+    padding-bottom: 12px;
+    width: 20%;
+}
+
+
+footer{
+  float: left;
+  width: 100%;
+}
+
+.det_prod{
+  background-color: #23406d;
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+
+/************************* SCHEDA *******************************/
+.scheda{
+  width: 90%;
+  margin: 10px 5% 10px 5%;
+  border: 2px solid #b8babc;
+  float: left;
+}
+
+.scheda_img {
+    float: left;
+    margin: 5px 5% 5px 5px;
+    width: 45%;
+}
+
+
+.scheda_img_grd_vis{
+  width:69%;
+ float: left;
+ visibility: visible;
+  
+}
+.scheda_img_grd_invis{
+  width:69%;
+ float: left;
+ display: none;
+  
+}
+span.fot{
+  position: relative;
+}
+
+
+.scheda_img_pic{
+     float: right;
+    margin: 0 5px 5px;
+    width: 100%;
+     max-height: 90px;
+  
+}
+
+.scheda_img {
+  width: 50%;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  
+}
+.sc_img_pic{
+	float: right;
+    margin: 0 5px 5px;
+    width: 17.55%;
+}
+
+
+ .scheda_dati{
+  float: left;
+ margin-top: 20px;
+ width: 45%;
+ font-family: arial;
+ margin: 5px;
+ }
+
+  .scheda_dati .titolo{
+  float: left;
+  font-size: 28px;
+  width: 100%;
+ }
+
+  .scheda_dati .caratt{
+  float: left;
+  font-size: 24px;
+  color: #b1afaf;
+   width: 100%;
+ }
+
+  .scheda_dati .dati{
+  float: left;
+  background: #cccaca;
+  width: 100%;
+   margin: 30px 0;
+  padding: 10px 0;
+ }
+
+  .scheda_dati .dati .euro{
+  float: left;
+  font-size: 14px;
+  margin-left: 10px;
+ }
+
+ .scheda_dati .dati .prezzo{
+  float: left;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: -3px;
+ }
+
+  .scheda_dati .quantita{
+  float: left;
+  font-size: 18px;
+  width: 100%;
+ }
+ .scheda_dati input{
+  float: left;
+  font-size: 18px;
+  width: 50%;
+ }
+
+ .scheda_dati .bottone{
+
+  width: 100%;
+ }
+
+
+ /****************Che cos'è shop-autoricambi************************/
+form.shop{
+  float: left;
+
+   margin-top: 20px;
+}
+
+
+form.form_prodotti{
+float: left;
+    margin-left: 9%;
+    text-align: center;
+    width: 100%;
+
+}
+
+form.form_prodotti .inp{
+ background: #23406d ;
+  width: 20%;
+  float: left;
+  margin: 10px 5px 10px 0;
+  color: #fff;
+}
+form.form_prodotti .inp input{
+
+  width: calc(100% - 5px);
+  float: left;
+}
+
+form.form_prodotti .inp p{
+
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+form.form_prodotti .bottone{
+
+   float: left;
+    margin-top: 10px;
+    padding-bottom: 12px;
+    width: 20%;
+}
+
+
+footer{
+  float: left;
+  width: 100%;
+}
+
+.det_prod{
+  background-color: #23406d;
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+
+.staccoarticoli  /*css blocco testo articoli cos'è shop-autoricambi*/
+{
+  padding:1%;
+  margin-top:0px;
+  border-top-width:5px;
+  border-top-style:outset;
+  border-top-color:#f0f0f0
+}
+
+.bloccoarticolo
+{
+  padding:50%;
+  margin-top:3px;
+}
+
+.articoli
+{
+  padding:0%;
+  margin-top:-2%;
+  margin-bottom:3%;
+  margin-left:2%;
+  border-bottom-style:groove;
+  border-bottom-color:black;
+  font-size:24px;
+  font-family:"Roboto",Helvetica,Arial,sans-seri;
+  font-weight:bold;
+  line-height:normal;
+  width:70%;
+  color:#2c5488;
+  float:left;
+}
+
+
+
+section article p a:link
+{
+  color:red;
+}
+
+.headseconarti  /*css pagina che cos'è shop-autoricambi*/
+{
+  font-family:"Roboto",Helvetica,Arial,sans-seri;
+  font-weight:bold; 
+  color:#bf191d;
+  height:10%;
+}
+
+.imgart  /*css immagini articoli */
+{
+  width:24%;
+  float:left;
+  margin-bottom:45px;
+  width:20%;
+}
+
+.testoarticoli
+{
+  color: #5b5b5b;
+    float: left;
+    font-family: arial;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 10px;
+    margin-bottom: 10px;
+     width: 72%;
+}
+
+/** sez dx ***/
+.shop_dx{
+  float: right;
+  width: 25%;
+}
+
+.shop_dx img{
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/********/
+
+form.shop{
+  float: left;
+
+   margin-top: 0px;
+   width: 100%;
+}
+
+.shop{
+  float: left;
+
+   margin-top: 0px;
+   width: 100%;
+}
+
+form.shop input{
+ margin:5px;
+ padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  width:93%;
+   padding: 10px 10px 10px 0;
+}
+
+form.shop input:focus{
+ margin:5px;
+ padding: 10px;
+border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+.formofficina
+{
+  padding:0%;
+  margin-top:-2%;
+  margin-bottom:3%;
+  margin-left:2%;
+  font-size:24px;
+  font-family:Arial,sans-seris;
+  font-weight:thin;
+  line-height:normal;
+  width:70%;
+  float:left;
+  color:#5b5b5b;
+}
+
+
+.formemail
+{
+  padding:0%;
+ 
+  width:95%;
+  float:left;
+  color:#5b5b5b;
+} 
+
+.formcitta
+{
+  padding:0%;
+ width: 38%;
+
+  float:left;
+  color:#5b5b5b;
+}
+
+.formcap
+{
+  padding:0%;
+  
+  width:15%;
+  float:left;
+  color:#5b5b5b;
+}
+
+.formvia
+{
+  padding:0%;
+ 
+  width:35%;
+  float:left;
+  color:#5b5b5b;
+}
+
+.formtele
+{
+  padding:0%;
+  
+  width:38%;
+  float:left;
+  color:#5b5b5b;
+}
+
+.formemoff
+{
+  padding:0%;
+  
+ width: 54%;
+  float:left;
+  color:#5b5b5b;
+}
+
+.image_menu_rap:hover{
+  opacity: 0.5;
+}
+
+.prodotti{
+  background-color: #fff;
+  
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    
+}
+
+.prodotti .prodotto_singolo a img{
+  
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    height: 130px;
+    
+}
+
+.prodotti p{
+  
+   color: #000;
+   font-size: 12px;
+   font-family: 12px;
+}
+
+.prodotti span{
+  
+   color: #2cc1a4;
+   font-size: 12px;
+   font-family: 12px;
+}
+.prodotti span.prezzo_prec{
+  
+   color: #747575;
+   font-size: 12px;
+   font-family: 12px;
+   text-decoration: line-through;
+}
+
+
+
+
+.prodotti .prodotto_singolo{
+  border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10%;
+     margin-top: 18px;
+    padding: 0;
+    text-align: center;
+    width: 11.89%;
+}
+
+.prodotti .prodotto_singolo:hover{
+  opacity: 0.5;
+}
+
+.menu_partners{
+  text-align: center;
+border-top-style: solid;
+ border-top-width: 5px;
+ border-top-color: #fff;
+   background-color: #23406d;
+    height: 250px;
+    margin-top: 50px;
+    transform: rotate(1deg);
+    width: 100%;
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+
+}
+.menu_partners .title{
+  font-size: 18px;
+  font-family: arial;
+  color: #fff;
+}
+
+.image_partners
+{ 
+ border:none;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 36px;
+    width: 11.89%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.image_partners:hover{
+  opacity: 0.5;
+}
+
+.vuoto{
+  width: 100%;
+  margin-bottom: -1px;
+    margin-top: 50px;
+    padding: 15px 0;
+  background-color: #333333;
+  
+    transform: rotate(1deg);
+    
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+}
+
+.vuoto2{
+  width: 100%;
+  padding: 20px 0;
+  background-color: #000;
+    transform: rotate(1deg);
+    
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+}
+
+.foot{
+  width: 100%;
+ margin-top: -15px;
+    padding: 20px 0 50px;
+  background-color: #000;
+  
+  
+}
+
+form p.cerca{
+  color: #fff;
+  font-size:18px;
+  font-family: arial;
+  text-align: center;
+ }
+
+
+form input{
+ width: 100%;
+ }
+
+form input.bottone{
+ background: #23406d none repeat scroll 0 0;
+    border: 1px solid #23406d;
+    color: #fff;
+    cursor: pointer;
+    font: bold 12px Arial,Helvetica,sans-serif;
+    margin-top: 15px;
+    outline: medium none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 102%;
+ }
+
+form input.bottone:hover{
+ opacity: 0.8;
+ }
+
+
+
+/******************************** conatatti ************************************************/
+.scrittacontatti h1{
+    color: red;
+    float: right;
+    margin: 5px 5px 5px 10px;
+    width: 33%;
+    
+}
+
+.testoscrittacontatti {
+    
+    
+    float: left;
+    font-size: 23px;
+    margin-bottom: 10px;
+    text-align: justify;
+    width: 33%;
+    margin-left: 10px;
+}
+ .scrittacontatti a img{
+  width: 33%;
+ }
+
+
+.dati {
+    float: right;
+    margin: -36px 5px 5px 10px;
+    text-align: justify;
+  width: 24%;
+  font-size: 21px;
+}
+
+.daticontatti {
+    color: red;
+    float: left;
+    font-size: 25px;
+    text-align: left;
+    width: 100%;
+}
+
+.scrittasottodati {
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+}
+ .scrittasottodati a img{
+  width:36px;
+ }
+ 
+ /****************************************Carrelloooooooooo**************************/
+ table tr td{
+ width: 16%;
+ }
+ 
+ 
+ 
+ 
+ 
+/*******************************************Login*************************************************/
+#loginform {	
+	background-color: #f7f7f7;
+	display: block;
+	height: 190px;
+	margin: 80px auto;	
+	outline: solid 10px rgba(0,0,0,0.10);
+	width: 190px;
+	padding: 30px;
+}
+
+.login-username:before { 
+	content: "Login Form";
+	color: #4c4c4c;	
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 0;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+} 
+ 
+ .login-username label, .login-password label {
+	display: none;
+	text-indent: -9999px;
+}
+ 
+.login-username .input{ 
+	margin-top: 15px;
+ } 
+
+.login-password .input { margin-top: -14px;}
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+   color: #4c4c4c;
+   text-transform: uppercase;
+}
+
+::-webkit-input-placeholder {
+   color: #5d5b5b;
+   text-transform: uppercase;
+}
+
+.input { 
+	background-color: #fff;
+	cursor: text;
+	border: solid 1px #dedede; 
+	box-sizing: border-box;
+	color: #4c4c4c;
+	font: 400 13px/18px 'oswald';
+	height: 40px;
+	margin-bottom: -18px;
+	outline: none;
+	padding: 8px 15px;
+	transition: border 0.3s;
+	width:100%;
+}
+
+.input:focus { border: solid 1px #f35b5b; }
+
+.login-username:after {
+	background-color: #f7f7f7;
+	content: '*';	
+	color: #f35b5b;
+	height: 35px;
+	width: 35px;
+	float: right;
+	font: 400 24px 'oswald';
+	line-height: 43px;
+	position: relative;
+	overflow: hidden;
+	right: 2px;
+	text-align: center;
+	top: -24px;
+}
+
+.login-password:after {
+	background-color: #f7f7f7;
+	content: '*';	
+	color: #f35b5b;
+	height: 35px;
+	width: 35px;
+	float: right;
+	font: 400 24px 'oswald';
+	line-height: 43px;
+	position: relative;
+	overflow: hidden;
+	right: 2px;
+	text-align: center;
+	top: -24px;
+}
+
+.button-primary {
+	background-color: #23406d;
+	border: solid 1px transparent; 
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	font:  14px/36px 'oswald';
+	height: 42px;
+	letter-spacing: 1px;
+	margin-top: -11px;
+	outline: none;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background-color 0.5s;
+	width: 100%;
+}
+
+.button-primary:hover {
+	background-color: #469DB6;
+
+}
+.login-remember { 
+	display: none;
+}
+ 
+ 
