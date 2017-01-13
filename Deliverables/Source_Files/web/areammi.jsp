@@ -10,7 +10,6 @@
     window.navigate("areacli.jsp")
 </script> 
 
-
 </header>
 <div class="bloccocos"> 
     <h1 class="bloccoscricos">
@@ -27,3 +26,5 @@
 
     <img src="images/pattini_scheda.jpg">
 </section>
+
+<%@ include file="footer.jsp" %>
