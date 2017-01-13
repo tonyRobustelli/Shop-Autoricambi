@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ProductControl</display-name>
+  <welcome-file-list>
+    <welcome-file>./index.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+    <description>JNDI reference to a data source</description>
+    <res-ref-name>jdbc/shop_autoricambi</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <servlet-name>PartnerControl</servlet-name>
+    <servlet-class>servlet.PartnerControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PartnerControl</servlet-name>
+    <url-pattern>/product</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginControl</servlet-name>
+    <servlet-class>servlet.servlet_login.LoginControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginControl</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AcquistaControl</servlet-name>
+    <servlet-class>servlet.servlet_carrello.AcquistaControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AcquistaControl</servlet-name>
+    <url-pattern>/AcquistaControl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CarrelloControl</servlet-name>
+    <servlet-class>servlet.servlet_carrello.CarrelloControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CarrelloControl</servlet-name>
+    <url-pattern>/CarrelloControl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DelCarrelloControl</servlet-name>
+    <servlet-class>servlet.servlet_carrello.DelCarrelloControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DelCarrelloControl</servlet-name>
+    <url-pattern>/DelCarrelloControl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RegistrazioneControl</servlet-name>
+    <servlet-class>servlet.servlet_registrazione.RegistrazioneControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrazioneControl</servlet-name>
+    <url-pattern>/regclie</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ProdottiControl</servlet-name>
+    <servlet-class>servlet.servlet_prodotti.ProdottiControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProdottiControl</servlet-name>
+    <url-pattern>/ProdottiControl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AmministratoreProdottiControl</servlet-name>
+    <servlet-class>servlet.servlet_amministatoreprodotti.AmministratoreProdottiControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AmministratoreProdottiControl</servlet-name>
+    <url-pattern>/regprod</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>AmministratoreCancProdottiControl</servlet-name>
+    <servlet-class>servlet.servlet_amministratorecancprod.AmministratoreCancProdottiControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AmministratoreCancProdottiControl</servlet-name>
+    <url-pattern>/cancprod</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>LogoutControl</servlet-name>
+    <servlet-class>servlet.servlet_logout.LogoutControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutControl</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+</web-app>
+
+
